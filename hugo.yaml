@@ -37,7 +37,7 @@ languages:
 services:
     # Change it to your Disqus shortname before using
     disqus:                                 # Disqus评论系统配置
-        shortname: "hugo-theme-stack"       # Disqus站点标识符
+        shortname: ""                       # Disqus站点标识符（当前为空，需要设置为您的Disqus账户shortname）
     # GA Tracking ID
     googleAnalytics:                        # Google Analytics配置
         id:                                 # GA跟踪ID（需要填入实际ID）
@@ -75,8 +75,8 @@ params:
 
     # 评论系统配置
     comments:
-        enabled: true                       # 启用评论功能
-        provider: disqus                    # 评论服务提供商
+        enabled: false                       # 启用评论功能
+        provider: giscus                    # 评论服务提供商（改为免费的giscus）
 
         # DisqusJS 配置（Disqus的JS版本）
         disqusjs:
@@ -146,13 +146,13 @@ params:
 
         # Giscus 配置（基于GitHub Discussions的评论）
         giscus:
-            repo:                           # GitHub仓库
-            repoID:                         # 仓库ID
-            category:                       # 讨论分类
-            categoryID:                     # 分类ID
-            mapping:                        # 页面映射方式
-            lightTheme:                     # 浅色主题
-            darkTheme:                      # 深色主题
+            repo: zhangquanhua1/blog-source  # GitHub仓库，格式为：用户名/仓库名
+            repoID: "R_kgDOLXXXXX"          # 仓库ID（需要替换为实际值）
+            category: "Announcements"        # 讨论分类
+            categoryID: "DIC_kwDOLXXXXXXXXX" # 分类ID（需要替换为实际值）
+            mapping: "pathname"             # 页面映射方式
+            lightTheme: "light"             # 浅色主题
+            darkTheme: "dark"               # 深色主题
             reactionsEnabled: 1             # 启用反应表情
             emitMetadata: 0                 # 发送元数据
 

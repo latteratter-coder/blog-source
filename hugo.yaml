@@ -25,11 +25,11 @@ disableLanguages: ["zh-cn", "ar", "ja", "ko", "fr", "de", "es"]
 languages:
     en:                                      # 英语配置
         languageName: English                # 语言显示名称
-        title: Example Site                  # 英文网站标题
+        title: 二进制                  # 英文网站标题
         weight: 1                           # 语言权重
         params:
             sidebar:
-                subtitle: Example description # 英文网站副标题
+                subtitle: 学无止境 # 英文网站副标题
                 avatar:
                     enabled: false              # 禁用头像显示
 

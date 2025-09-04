@@ -12,6 +12,9 @@ DefaultContentLanguage: en
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: false
 
+# 禁用多语言功能，强制单语言模式
+disableLanguages: ["zh-cn", "ar", "ja", "ko", "fr", "de", "es"]
+
 languages:
     en:
         languageName: English
@@ -20,21 +23,6 @@ languages:
         params:
             sidebar:
                 subtitle: Example description
-    zh-cn:
-        languageName: 中文
-        title: 演示站点
-        weight: 2
-        params:
-            sidebar:
-                subtitle: 演示说明
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-        params:
-            sidebar:
-                subtitle: وصف تجريبي
 
 services:
     # Change it to your Disqus shortname before using

@@ -6,8 +6,8 @@
 baseurl: "https://zhangquanhua1.github.io/"  # 网站根URL地址
 languageCode: en-us                          # 网站语言代码
 theme: hugo-theme-stack                      # 使用的主题名称
-title: Example Site                          # 网站标题
-copyright: Example Person                    # 版权信息
+title: 二进制                          # 网站标题
+
 
 # 国际化支持配置
 # Theme i18n support

@@ -1,257 +1,283 @@
-baseurl: "https://zhangquanhua1.github.io/"
-languageCode: en-us
-theme: hugo-theme-stack
-title: Example Site
-copyright: Example Person
+# ========================================
+# Hugo 博客站点配置文件
+# ========================================
 
+# 网站基本信息
+baseurl: "https://zhangquanhua1.github.io/"  # 网站根URL地址
+languageCode: en-us                          # 网站语言代码
+theme: hugo-theme-stack                      # 使用的主题名称
+title: Example Site                          # 网站标题
+copyright: Example Person                    # 版权信息
+
+# 国际化支持配置
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: en
+DefaultContentLanguage: en                   # 默认内容语言
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
+hasCJKLanguage: false                        # 是否包含中日韩语言（如使用中文建议设为true）
 
 # 禁用多语言功能，强制单语言模式
 disableLanguages: ["zh-cn", "ar", "ja", "ko", "fr", "de", "es"]
 
+# 语言配置
 languages:
-    en:
-        languageName: English
-        title: Example Site
-        weight: 1
+    en:                                      # 英语配置
+        languageName: English                # 语言显示名称
+        title: Example Site                  # 英文网站标题
+        weight: 1                           # 语言权重
         params:
             sidebar:
-                subtitle: Example description
+                subtitle: Example description # 英文网站副标题
+                avatar:
+                    enabled: false              # 禁用头像显示
 
+# 第三方服务配置
 services:
     # Change it to your Disqus shortname before using
-    disqus:
-        shortname: "hugo-theme-stack"
+    disqus:                                 # Disqus评论系统配置
+        shortname: "hugo-theme-stack"       # Disqus站点标识符
     # GA Tracking ID
-    googleAnalytics:
-        id:
+    googleAnalytics:                        # Google Analytics配置
+        id:                                 # GA跟踪ID（需要填入实际ID）
 
+# 分页配置
 pagination:
-    pagerSize: 3
+    pagerSize: 10                           # 每页显示文章数量
 
+# URL结构配置
 permalinks:
-    post: /p/:slug/
-    page: /:slug/
+    post: /p/:slug/                         # 文章URL格式
+    page: /:slug/                           # 页面URL格式
 
+# 主题参数配置
 params:
-    mainSections:
-        - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    mainSections:                           # 主要内容区域
+        - post                              # 主页显示post目录下的内容
+    featuredImageField: image               # 特色图片字段名
+    rssFullContent: true                    # RSS包含完整内容
+    favicon:                                # 网站图标路径 e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
-    footer:
-        since: 2020
-        customText:
-
+    # 日期格式配置
     dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+        published: Jan 02, 2006             # 发布日期显示格式
+        lastUpdated: Jan 02, 2006 15:04 MST # 更新日期显示格式
 
-    sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        avatar:
-            enabled: true
-            local: true
-            src: img/avatar.png
-
+    # 文章配置
     article:
-        math: false
-        toc: true
-        readingTime: true
-        license:
-            enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+        math: false                         # 是否启用数学公式支持
+        toc: true                          # 是否显示文章目录
+        readingTime: true                   # 是否显示阅读时间
+        license:                            # 文章许可证配置
+            enabled: true                   # 启用许可证显示
+            default: Licensed under CC BY-NC-SA 4.0  # 默认许可证文本
 
+    # 评论系统配置
     comments:
-        enabled: true
-        provider: disqus
+        enabled: true                       # 启用评论功能
+        provider: disqus                    # 评论服务提供商
 
+        # DisqusJS 配置（Disqus的JS版本）
         disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
+            shortname:                      # DisqusJS站点标识
+            apiUrl:                         # API地址
+            apiKey:                         # API密钥
+            admin:                          # 管理员用户名
+            adminLabel:                     # 管理员标签
 
+        # Utterances 配置（基于GitHub Issues的评论）
         utterances:
-            repo:
-            issueTerm: pathname
-            label:
+            repo:                           # GitHub仓库地址
+            issueTerm: pathname             # Issue匹配方式
+            label:                          # Issue标签
 
+        # Beaudar 配置（Utterances的中文版）
         beaudar:
-            repo:
-            issueTerm: pathname
-            label:
-            theme:
+            repo:                           # GitHub仓库地址
+            issueTerm: pathname             # Issue匹配方式
+            label:                          # Issue标签
+            theme:                          # 主题样式
 
+        # Remark42 配置（自托管评论系统）
         remark42:
-            host:
-            site:
-            locale:
+            host:                           # 服务器地址
+            site:                           # 站点ID
+            locale:                         # 语言设置
 
+        # Vssue 配置（基于Git平台的评论）
         vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
+            platform:                       # Git平台（github/gitlab等）
+            owner:                          # 仓库所有者
+            repo:                           # 仓库名称
+            clientId:                       # OAuth应用ID
+            clientSecret:                   # OAuth应用密钥
+            autoCreateIssue: false          # 自动创建Issue
 
         # Waline client configuration see: https://waline.js.org/en/reference/component.html
+        # Waline 配置（轻量级评论系统）
         waline:
-            serverURL:
-            lang:
-            pageview:
-            emoji:
+            serverURL:                      # 服务器地址
+            lang:                           # 语言设置
+            pageview:                       # 页面浏览统计
+            emoji:                          # 表情包配置
                 - https://unpkg.com/@waline/emojis@1.0.1/weibo
-            requiredMeta:
-                - name
-                - email
-                - url
-            locale:
-                admin: Admin
-                placeholder:
+            requiredMeta:                   # 必填字段
+                - name                      # 昵称
+                - email                     # 邮箱
+                - url                       # 网站
+            locale:                         # 本地化文本
+                admin: Admin                # 管理员显示文本
+                placeholder:                # 占位符文本
 
+        # Twikoo 配置（简洁的评论系统）
         twikoo:
-            envId:
-            region:
-            path:
-            lang:
+            envId:                          # 环境ID
+            region:                         # 地域
+            path:                           # 路径
+            lang:                           # 语言
 
         # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+        # Cactus 配置（基于Matrix的评论系统）
         cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"  # 默认服务器
+            serverName: "cactus.chat"                                # 服务器名称
+            siteName: ""                    # 站点名称 You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
 
+        # Giscus 配置（基于GitHub Discussions的评论）
         giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
+            repo:                           # GitHub仓库
+            repoID:                         # 仓库ID
+            category:                       # 讨论分类
+            categoryID:                     # 分类ID
+            mapping:                        # 页面映射方式
+            lightTheme:                     # 浅色主题
+            darkTheme:                      # 深色主题
+            reactionsEnabled: 1             # 启用反应表情
+            emitMetadata: 0                 # 发送元数据
 
+        # Gitalk 配置（基于GitHub Issues的评论）
         gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-            proxy:
+            owner:                          # 仓库所有者
+            admin:                          # 管理员用户名
+            repo:                           # 仓库名称
+            clientID:                       # OAuth应用ID
+            clientSecret:                   # OAuth应用密钥
+            proxy:                          # 代理地址
 
+        # Cusdis 配置（轻量级评论系统）
         cusdis:
-            host:
-            id:
+            host:                           # 服务器地址
+            id:                             # 站点ID
+
+    # 小部件配置
     widgets:
-        homepage:
-            - type: search
-            - type: archives
+        homepage:                           # 主页小部件
+            - type: search                  # 搜索框
+            - type: archives                # 归档小部件
               params:
-                  limit: 5
-            - type: categories
+                  limit: 5                  # 显示数量限制
+            - type: categories              # 分类小部件
               params:
-                  limit: 10
-            - type: tag-cloud
+                  limit: 10                 # 显示数量限制
+            - type: tag-cloud               # 标签云小部件
               params:
-                  limit: 10
-        page:
-            - type: toc
+                  limit: 10                 # 显示数量限制
+        page:                               # 页面小部件
+            - type: toc                     # 文章目录
 
+    # Open Graph 和社交媒体配置
     opengraph:
-        twitter:
+        twitter:                            # Twitter卡片配置
             # Your Twitter username
-            site:
-
+            site:                           # Twitter用户名
             # Available values: summary, summary_large_image
-            card: summary_large_image
+            card: summary_large_image       # 卡片类型
 
+    # 默认图片配置
     defaultImage:
         opengraph:
-            enabled: false
-            local: false
-            src:
+            enabled: false                  # 启用默认OG图片
+            local: false                    # 使用本地图片
+            src:                            # 图片路径
 
+    # 主题外观配置
     colorScheme:
         # Display toggle
-        toggle: true
-
+        toggle: true                        # 显示深色/浅色模式切换按钮
         # Available values: auto, light, dark
-        default: auto
+        default: auto                       # 默认主题模式（自动/浅色/深色）
 
+    # 图片处理配置
     imageProcessing:
         cover:
-            enabled: true
+            enabled: true                   # 启用封面图片处理
         content:
-            enabled: true
+            enabled: true                   # 启用内容图片处理
 
+# 自定义菜单配置
 ### Custom menu
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+    main: []                                # 主导航菜单（当前为空）
 
+    # 社交媒体菜单
     social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+        - identifier: github                # 唯一标识符
+          name: GitHub                      # 显示名称
+          url: https://github.com/CaiJimmy/hugo-theme-stack  # 链接地址
           params:
-              icon: brand-github
+              icon: brand-github            # 图标名称
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
+        - identifier: twitter               # 唯一标识符
+          name: Twitter                     # 显示名称
+          url: https://twitter.com          # 链接地址
           params:
-              icon: brand-twitter
+              icon: brand-twitter           # 图标名称
 
+# 相关文章配置
 related:
-    includeNewer: true
-    threshold: 60
-    toLower: false
-    indices:
-        - name: tags
+    includeNewer: true                      # 包含更新的文章
+    threshold: 60                           # 相关度阈值
+    toLower: false                          # 是否转换为小写
+    indices:                                # 索引权重配置
+        - name: tags                        # 标签权重
           weight: 100
-
-        - name: categories
+        - name: categories                  # 分类权重
           weight: 200
 
+# Markdown 渲染配置
 markup:
-    goldmark:
+    goldmark:                               # Goldmark渲染器配置
         extensions:
-            passthrough:
-                enable: true
-                delimiters:
-                    block:
-                        - - \[
-                          - \]
-                        - - $$
-                          - $$
-                    inline:
-                        - - \(
-                          - \)
+            passthrough:                    # 直通模式配置
+                enable: true                # 启用直通模式
+                delimiters:                 # 分隔符配置
+                    block:                  # 块级分隔符
+                        - - \[              # LaTeX块级公式开始
+                          - \]              # LaTeX块级公式结束
+                        - - $$              # 数学公式块开始
+                          - $$              # 数学公式块结束
+                    inline:                 # 行内分隔符
+                        - - \(              # LaTeX行内公式开始
+                          - \)              # LaTeX行内公式结束
         renderer:
             ## Set to true if you have HTML content inside Markdown
-            unsafe: true
+            unsafe: true                    # 允许在Markdown中使用HTML内容
+
+    # 目录配置
     tableOfContents:
-        endLevel: 4
-        ordered: true
-        startLevel: 2
+        endLevel: 4                         # 目录结束级别
+        ordered: true                       # 使用有序列表
+        startLevel: 2                       # 目录开始级别
+
+    # 代码高亮配置
     highlight:
-        noClasses: false
-        codeFences: true
-        guessSyntax: true
-        lineNoStart: 1
-        lineNos: true
-        lineNumbersInTable: true
-        tabWidth: 4
+        noClasses: false                    # 使用CSS类而不是内联样式
+        codeFences: true                    # 启用代码围栏
+        guessSyntax: true                   # 自动检测语法
+        lineNoStart: 1                      # 行号起始值
+        lineNos: true                       # 显示行号
+        lineNumbersInTable: true            # 在表格中显示行号
+        tabWidth: 4                         # Tab宽度

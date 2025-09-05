@@ -57,7 +57,7 @@ params:
         - post                              # 主页显示post目录下的内容
     featuredImageField: image               # 特色图片字段名
     rssFullContent: true                    # RSS包含完整内容
-    favicon:                                # 网站图标路径 e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    favicon: /favicon.svg                  # 网站图标路径，使用自定义SVG图标
 
     # 日期格式配置
     dateFormat:

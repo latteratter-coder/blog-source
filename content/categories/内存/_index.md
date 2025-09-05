@@ -2,8 +2,8 @@
 title: "内存"
 description: "内存管理"
 slug: "mem"
-image: "hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg"
+image: "category-icon.svg"
 style:
-    background: "#2a9d8f"
+    background: "#4285F4"
     color: "#fff"
 ---

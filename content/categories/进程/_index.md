@@ -2,8 +2,8 @@
 title: "进程"
 description: "进程管理"
 slug: "process"
-image: "hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg"
+image: "category-icon.svg"
 style:
-    background: "#2a9d8f"
+    background: "#00ACC1"
     color: "#fff"
 ---

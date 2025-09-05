@@ -2,8 +2,8 @@
 title: "文件"
 description: "文件系统"
 slug: "file"
-image: "hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg"
+image: "category-icon.svg"
 style:
-    background: "#2a9d8f"
+    background: "#34A853"
     color: "#fff"
 ---

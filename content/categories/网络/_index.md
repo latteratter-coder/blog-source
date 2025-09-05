@@ -2,8 +2,8 @@
 title: "网络"
 description: "网络协议和工具"
 slug: "net"
-image: "hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg"
+image: "category-icon.svg"
 style:
-    background: "#2a9d8f"
+    background: "#EA4335"
     color: "#fff"
 ---

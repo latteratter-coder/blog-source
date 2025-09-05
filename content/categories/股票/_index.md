@@ -2,8 +2,8 @@
 title: "股票"
 description: "股票知识"
 slug: "stock"
-image: "hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg"
+image: "category-icon.svg"
 style:
-    background: "#2a9d8f"
+    background: "#FBBC05"
     color: "#fff"
 ---
